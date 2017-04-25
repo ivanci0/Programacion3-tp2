@@ -13,10 +13,10 @@ namespace tp02
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("bienvenido, ingrese el nombre de la ciudad y luego enter");
+            Console.WriteLine("bienvenido, ingrese el nombre de la pelicula y luego enter");
             string titulo = Console.ReadLine();
 
-            WebRequest req = WebRequest.Create($"https://maps.googleapis.com/maps/api/geocode/json?address={titulo.ToLower()}");
+            WebRequest req = WebRequest.Create($"http://www.omdbapi.com/?t={titulo.ToLower()}");
 
             WebResponse respuesta = req.GetResponse();
 
